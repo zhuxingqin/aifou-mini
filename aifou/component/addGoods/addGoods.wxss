@@ -1,0 +1,168 @@
+/* component/addGoods/addGoods.wxss */
+.addGoodsBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.addGoodsBox>.closeView{
+  width: 100%;
+  height: 100%;
+}
+
+.addGoodsBox>.inBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.addGoodsBox .content {
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.content .top {
+  position: relative;
+  height: 130rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.content .top view {
+  display: inline-block;
+  margin-left: 170rpx;
+}
+
+.content .top view .title {
+  font-size: 25rpx;
+  display: block;
+}
+
+.content .top view .price {
+  font-size: 28rpx;
+  margin-top: 15rpx;
+  display: block;
+  color: #6cbe74;
+}
+
+.content .closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40rpx;
+  height: 40rpx;
+  color: #b3b3b3;
+  text-align: center;
+}
+
+.content .top .goodsImg {
+  position: absolute;
+  top: -40rpx;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+}
+
+.content .center {
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.content .center>text {
+  display: block;
+  font-size: 26rpx;
+}
+
+.content .center .spec {
+  display: inline-block;
+  padding: 10rpx 25rpx;
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 3px;
+  font-size: 23rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.content .center .active {
+  border: 1px solid #6cbe74;
+  background-color: #6cbe74;
+  color: #fff;
+}
+
+.content .bottom>text {
+  font-size: 26rpx;
+}
+
+.content .bottom {
+  padding: 20rpx 0;
+}
+
+.content .bottom .ediNum {
+  float: right;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.content .bottom .ediNum .btn {
+  width: 60rpx;
+  height: 50rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .bottom .ediNum .ediCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rpx;
+  height: 50rpx;
+  text-align: center;
+  border: 1px solid rgb(180, 180, 180);
+  font-size: 26rpx;
+}
+.content .bottom .btnL {
+  border-radius: 50% none none 0;
+  border: rgb(180, 180, 180) 1px solid;
+  border-right: none;
+  color: rgb(180, 180, 180);
+}
+.content .bottom .btnR {
+  border-radius: 0 6rpx 6rpx 0;
+  border: rgb(180, 180, 180) 1px solid;
+  border-left: none;
+  color: rgb(180, 180, 180);
+}
+
+.content .bottom .disabled {
+  border: 1px #cdcdcd solid;
+  background-color: #f1f1f1;
+  border-right: none;
+  color: #cdcdcd;
+}
+
+.btnBox view {
+  display: inline-block;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.btnBox .cartBtn {
+  background-color: #e1f3e3;
+  color: #6cbe74;
+}
+
+.btnBox .shopBtn {
+  background-color: #6cbe74;
+  color: #fff;
+}

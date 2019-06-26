@@ -1,0 +1,63 @@
+<!--pages/goodDetails/goodDetails.wxml-->
+<view class='detailBox'>
+  <swiper indicator-dots="true" autoplay="true" duration="500" circular="true" style='height:750rpx;'>
+    <block wx:for="{{good.img}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{$imgIp+item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='content'>
+    <view class='msg'>
+      <text class='title'>{{good.title}}</text>
+      <text class='price'>
+      <text style='font-size:27rpx;'>￥</text>{{good.price}}.00</text>
+      <text class='oldPrice'>￥{{good.oldPrice}}.00</text>
+    </view>
+    <text>运费:免运费</text>
+    <view class='share'>
+      <image src='../../src/img/index/share.png'></image>
+      <text>分享</text>
+    </view>
+  </view>
+  <view class='choseSpec' bindtap='doShow'>
+    <text class='listText'>选择：规格</text>
+    <view class='arrow'></view>
+  </view>
+  <view class='store'>
+    <view class='top' bindtap='jumpHome'>
+      <image class='logo' src='../../src/img/index/logo.png'></image>
+      <view class='sname'>
+        <text class='left'>爱否闪购</text>
+        <text class='right'>官方</text>
+      </view>
+      <view class='arrow'></view>
+    </view>
+    <view class='bottom'>
+      <image src='../../src/img/index/certification.png'></image>
+      <text style='margin-left:8rpx;'>企业认证</text>
+      <image src='../../src/img/index/certification.png' style='margin-left:15rpx;'></image>
+      <text style='margin-left:8rpx;'>店铺认证</text>
+    </view>
+  </view>
+  <view class='detail'>
+    <view class='title'>商品详情</view>
+    <view class='imgBox'>
+      <image src='{{$imgIp+good.detailImg}}' mode="widthFix"></image>
+    </view>
+  </view>
+  <image src='../../src/img/index/soonShop.jpg' mode='widthFix'></image>
+  <view class='addBar'>
+    <view class='sBtn'>
+      <image src='../../src/img/index/msg.png' class='icon'></image>
+      <text class='textS'>客服</text>
+    </view>
+    <view class='sBtn' bindtap='jumpCart'>
+      <image src='../../src/img/index/cartB.png' class='icon'></image>
+      <text class='textS'>购物车</text>
+    </view>
+    <view class='bBtn cartBtn' bindtap='doShow' data-where="cart">加入购物车</view>
+    <view class='bBtn shopBtn'  bindtap='doShow' data-where="waitPay">立即购买</view>
+  </view>
+  <addGoods wx:if="{{addBox}}" bind:doClose="doClose" sendPid="{{good.pid}}" nextBtn="{{nextBtn}}"></addGoods>
+</view>

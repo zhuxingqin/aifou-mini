@@ -1,0 +1,76 @@
+<!--pages/classify/classify.wxml-->
+<view class='classifyBox'>
+  <scroll-view scroll-y class='nav'>
+    <view class="cTitle {{index==navIndex?'active':''}}" catchtap='chooseType' wx:for="{{ptype}}" wx:key="{{index}}" data-index="{{index}}" data-id='{{item.id}}'>{{item.text}}</view>
+  </scroll-view>
+  <view style='height:100%;' class='content'>
+    <scroll-view scroll-y="true" scroll-into-view="{{contentActive}}" scroll-with-animation="true" bindscroll="onScroll" class='bodyR'>
+      <view id='iphone' class='pBox'>
+        <text class='cTitle'>iPhone</text>
+        <view class="goodBox" wx:for="{{phoneList}}" wx:key="{{index}}" bindtap='jumpDetails' data-pid="{{item.pid}}">
+          <image src='{{$imgIp+item.img}}'></image>
+          <view>
+            <text class='title'>{{item.title}}</text>
+            <text class='price'>￥{{item.price}}.00</text>
+          </view>
+          <view class='addCart' catchtap='doShow' data-pid="{{item.pid}}">+</view>
+        </view>
+        <text wx:if="{{!phoneList}}" class='prompt'>此类下暂时没有商品</text>
+      </view>
+
+      <view id='android' class='pBox'>
+        <text class='cTitle'>安卓</text>
+        <view class="goodBox" wx:for="{{androidList}}" wx:key="{{index}}" bindtap='jumpDetails' data-pid="{{item.pid}}">
+          <image src='{{$imgIp+item.img}}'></image>
+          <view>
+            <text class='title'>{{item.title}}</text>
+            <text class='price'>￥{{item.price}}.00</text>
+          </view>
+          <view class='addCart' catchtap='doShow' data-pid="{{item.pid}}">+</view>
+        </view>
+        <text wx:if="{{androidList.length==0}}" class='prompt'>此类下暂时没有商品</text>
+      </view>
+
+      <view id='pad' class='pBox'>
+        <text class='cTitle'>平板</text>
+        <view class="goodBox" wx:for="{{padList}}" wx:key="{{index}}" bindtap='jumpDetails' data-pid="{{item.pid}}">
+          <image src='{{$imgIp+item.img}}'></image>
+          <view>
+            <text class='title'>{{item.title}}</text>
+            <text class='price'>￥{{item.price}}.00</text>
+          </view>
+          <view class='addCart' catchtap='doShow' data-pid="{{item.pid}}">+</view>
+        </view>
+        <text wx:if="{{padList.length==0}}" class='prompt'>此类下暂时没有商品</text>
+      </view>
+
+      <view id='pc' class='pBox'>
+        <text class='cTitle'>笔记本</text>
+        <view class="goodBox" wx:for="{{pcList}}" wx:key="{{index}}" bindtap='jumpDetails' data-pid="{{item.pid}}">
+          <image src='{{$imgIp+item.img}}'></image>
+          <view>
+            <text class='title'>{{item.title}}</text>
+            <text class='price'>￥{{item.price}}.00</text>
+          </view>
+          <view class='addCart' catchtap='doShow' data-pid="{{item.pid}}">+</view>
+        </view>
+        <text wx:if="{{pcList.length==0}}" class='prompt'>此类下暂时没有商品</text>
+      </view>
+
+      <view id='other' class='pBox'>
+        <text class='cTitle'>配件</text>
+        <view class="goodBox" wx:for="{{otherList}}" wx:key="{{index}}" bindtap='jumpDetails' data-pid="{{item.pid}}">
+          <image src='{{$imgIp+item.img}}'></image>
+          <view>
+            <text class='title'>{{item.title}}</text>
+            <text class='price'>￥{{item.price}}.00</text>
+          </view>
+          <view class='addCart' catchtap='doShow' data-pid="{{item.pid}}">+</view>
+        </view>
+        <text wx:if="{{otherList.length==0}}" class='prompt'>此类下暂时没有商品</text>
+      </view>
+    </scroll-view>
+  </view>
+  <cartButton></cartButton>
+  <addGoods sendPid="{{pid}}" wx:if="{{addBox}}" bind:doClose="doClose" catchtouchmove="ture"></addGoods>
+</view>

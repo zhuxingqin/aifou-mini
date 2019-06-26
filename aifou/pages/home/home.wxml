@@ -1,0 +1,67 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view class="search" catchtap='search'>
+    <image src="../../src/img/index/search.png" class='sIcon'></image>
+    <input placeholder="搜索商品" class='inp' />
+  </view>
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="true" circular='true' interval="3000" indicator-dots="true" class='swiperBox'>
+      <block wx:for="{{images}}" wx:key="{{index}}">
+        <swiper-item class="swiper">
+          <image src="{{$ip+item}}" style="width:100%;" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='classify'>
+    <view catchtap='search' wx:for="{{classify}}" wx:key="{{index}}" class='class' data-ptype="{{item.ptype}}">
+      <image src='{{$ip+item.img}}' class='classIcon'></image>
+      <text style='font-size:25rpx;'>{{item.text}}</text>
+    </view>
+  </view>
+  <view class='ensure'>
+    <view class='outBox'>
+      <view class='inBox' style='border-right:1px solid #fff;border-bottom:1px solid #fff;'>
+        <image src='../../src/img/index/back.png'></image>
+        <view class='tBox'>
+          <text>7天无理由退货</text>
+        </view>
+      </view>
+      <view class='inBox' style='border-bottom:1px solid #fff;'>
+        <image src='../../src/img/index/zhibao.png'></image>
+        <view class='tBox'>
+          <text>360天质保</text>
+        </view>
+      </view>
+    </view>
+    <view class='outBox'>
+      <view class='inBox' style='border-right:1px solid #fff;'>
+        <image src='../../src/img/index/shunfeng.png'></image>
+        <view class='tBox'>
+          <text>顺丰包邮</text>
+        </view>
+      </view>
+      <view class='inBox'>
+        <image src='../../src/img/index/quality.png'></image>
+        <view class='tBox'>
+          <text>专业检测</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='text-align:center;padding:40rpx 0 20rpx 0;'>
+    <text style="font-size:30rpx;">正在闪购</text>
+  </view>
+  <view class='goods' wx:for="{{goods}}" wx:key="{{index}}" data-pid="{{item.pid}}" bindtap='jumpGoodDetail'>
+    <image src='{{$ip+item.ad_img}}' mode="widthFix" class='img'></image>
+    <view>
+      <text>{{item.ad_title}}</text>
+      <view class='icon'></view>
+    </view>
+  </view>
+  <view class='loader' wx:if="{{isLoading}}">
+    <image src='../../src/img/index/loading.gif'></image>
+  </view>
+  <view wx:else class='noMore'>你触碰到我的底线了...</view>
+  <cartButton/>
+</view>

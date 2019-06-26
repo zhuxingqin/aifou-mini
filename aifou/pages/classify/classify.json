@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "产品分类",
+  "usingComponents": {
+    "cartButton": "../../component/cartButton/cartButton",
+    "addGoods": "../../component/addGoods/addGoods"
+  }
+}

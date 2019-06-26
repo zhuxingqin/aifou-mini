@@ -1,0 +1,100 @@
+/* pages/home/home.wxss */
+.search{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  flex-direction: row;
+  background-color: rgb(250, 250, 250);
+}
+.sIcon{
+  margin-left: 40rpx;
+  align-self: center;
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+}
+.inp{
+  display: inline-block;
+  height: 100rpx;
+  padding-left:20rpx; 
+  flex: 1;
+  font-size: 30rpx;
+  background-color: rgba(0,0,0,0);
+}
+.swiperBox{
+  height: 350rpx;
+}
+.classify{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding: 20rpx 0;
+}
+.classIcon{
+  width:70rpx;
+  height:70rpx;
+  display:block;
+  margin:0 auto;
+}
+.class{
+  flex: 1;
+  text-align: center;
+}
+.ensure .outBox{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.ensure .inBox{
+  background-color: rgb(250, 250, 250);
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 75rpx;
+}
+.ensure .inBox image{
+  display: inline-block;
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+  margin-left: 60rpx;
+  /* padding-top: 20rpx; */
+}
+.ensure .inBox .tBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+}
+.goods .img{
+  width: 100%;
+}
+.goods>view{
+  padding: 10rpx 0 40rpx 0;
+}
+.goods .icon{
+  border-right:solid 2px #cdcdcd;
+  border-top:solid 2px #cdcdcd;
+  height: 20rpx;
+  width: 20rpx;
+  float: right;
+  transform: rotateZ(45deg);
+  margin: 16rpx 40rpx 0 0;
+}
+.goods text{
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}
+.loader{
+  text-align: center;
+}
+.loader>image{
+  width: 200rpx;
+  height: 40rpx;
+}
+.noMore{
+  line-height: 100rpx;
+  text-align: center;
+  color: #919191;
+}

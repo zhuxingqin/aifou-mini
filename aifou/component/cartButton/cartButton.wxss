@@ -1,0 +1,28 @@
+/* pages/cartButton/cartButton.wxss */
+.cartBox{
+  position: fixed;
+  z-index: 2;
+  bottom: 80rpx;
+  right: 10rpx;
+  width:90rpx;
+  height:90rpx;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 10px rgb(150, 150, 150);
+}
+.cartBox image{
+  display: inline-block;
+  width:50rpx;
+  height:50rpx;
+  margin-top: 20rpx;
+}
+.cartBox .point{
+  background-color: rgb(216, 73, 29);
+  border-radius: 50%;
+  position: absolute;
+  width: 10rpx;
+  height: 10rpx;
+  top: 25%;
+  left: 65%;
+}

@@ -1,0 +1,51 @@
+<!--pages/user/user.wxml-->
+<view class='userBox'>
+    <view class='uInfo' wx:if="{{hasUserInfo}}">
+      <image src="{{userInfo.avatarUrl}}" class='port'></image>
+      <text class='uname'>{{userInfo.nickName}}</text>
+    </view>
+    <view class='uInfo' wx:else>
+      <button open-type='getUserInfo' class='port' bindgetuserinfo='bindgetuserinfo'>点击登录</button>
+      <text class='uname' style='padding-bottom: 70rpx;'></text>
+    </view>
+    <view class='myOrder'>
+      <view class='orderTop'>
+        <text class='left'>我的订单</text>
+        <view class='arrow'></view>
+        <text class='right'>查看全部订单</text>
+      </view>
+      <view class='orderBottom'>
+        <view class="orderClass">
+          <image class='icon' src='../../src/img/order/waitpay.png'></image>
+          <text>待付款</text>
+        </view>
+        <view class="orderClass">
+          <image class='icon' src='../../src/img/order/waitSend.png'></image>
+          <text>待发货</text>
+        </view>
+        <view class="orderClass">
+          <image class='icon' src='../../src/img/order/sendIng.png'></image>
+          <text>已发货</text>
+        </view>
+        <view class="orderClass">
+          <image class='icon' src='../../src/img/order/done.png'></image>
+          <text>已完成</text>
+        </view>
+      </view>
+    </view>
+    <view class='jumpCart' style='margin:10rpx 0;' 
+      bindtap='jumpCart'>
+      <text class='listText'>购物车</text>
+      <view class='arrow'></view>
+    </view>
+    <view class='list'>
+      <view 
+        class='jumpCart' 
+        style='border-bottom:1px solid #f1f1f1;'
+        wx:for="{{list}}" wx:key="{{index}}"
+        bindtap='jumpList'>
+        <text class='listText'>{{item}}</text>
+        <view class='arrow'></view>
+      </view>
+    </view>
+</view>

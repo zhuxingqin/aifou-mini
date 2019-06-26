@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<view class='searchPage'>
+  <view class="search" catchtap='search'>
+    <image src="../../src/img/index/search.png" class='sIcon'></image>
+    <input value='{{input}}' placeholder="搜索商品" class='inp' bindconfirm="search" auto-focus:ture/>
+    <image src='../../src/img/index/close.png' class='close' catchtap='close'></image>
+  </view>
+  <view class='goodsBox' wx:if="{{goodsList.length>0}}">
+    <view class="goodBox" wx:for="{{goodsList}}" wx:key="{{index}}" bindtap='jumpDetails' data-pid="{{item.pid}}">
+      <image src='{{$imgIp+item.img}}'></image>
+      <view>
+        <text class='title'>{{item.title}}</text>
+        <text class='price'>￥{{item.price}}.00</text>
+      </view>
+      <view class='addCart' catchtap='doShow' data-pid="{{item.pid}}">+</view>
+    </view>
+    <view class='noMore'>没有更多了...</view>
+  </view>
+  <view class='hisBox' wx:else>
+    <view class='title'>历史搜索</view>
+    <view class='content'>
+      <view class='text' wx:for="{{hisList}}" wx:key="{{index}}" catchtap='search' data-kw="{{item}}">{{item}}</view>
+    </view>
+    <view class='clearHis' catchtap='clearHis'>清空历史记录</view>
+  </view>
+  <addGoods sendPid="{{pid}}" wx:if="{{addBox}}" bind:doClose="doClose" catchtouchmove="ture"></addGoods>
+</view>

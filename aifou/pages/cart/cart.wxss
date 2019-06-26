@@ -1,0 +1,217 @@
+/* pages/cart/cart.wxss */
+.cartPage{
+  background-color: #f1f1f1;
+  height: 1500rpx;
+}
+.cartTop{
+  background-color: #fff;
+  border-top:1px solid #f1f1f1;
+  border-bottom:1px solid #f1f1f1;
+  padding: 20rpx;
+  position: relative;
+}
+.cartTop image{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: 7rpx;
+  margin: 0 10rpx 0 15rpx;
+}
+.cartTop .storeName{
+  font-size: 26rpx;
+}
+.cartTop .edi{
+  display: inline-block;
+  float: right;
+  font-size: 25rpx;
+  color: #68A6FF;
+  position: relative;
+  top:10rpx;
+}
+.radio{
+}
+/* checkbox未选中时样式 */
+checkbox .wx-checkbox-input{
+  border-radius: 50%;
+  height: 33rpx;
+  width: 33rpx;
+}
+
+/* checkbox选中时样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;
+  background-color: #6CBE72;
+  border: 5rpx solid #6CBE72;
+}
+.cartPage .gBox{
+  border-bottom:1px solid #f1f1f1;
+}
+.cartBody .goodsBox{
+  padding: 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative;
+}
+.cartBody .pic{
+  display: inline-block;
+  width: 200rpx;
+  height: 200rpx;
+}
+.cartBody .msg{
+  display: inline-block;
+  float: right;
+  width: 65%;
+  height: 200rpx;
+  position: relative;
+}
+.cartBody .msg .ediNum{
+  display: flex;
+  justify-content: left;
+  align-items:center;
+}
+.cartBody .msg .ediNum .btn{
+  width: 80rpx;
+  height: 65rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.cartBody .msg .ediNum .ediCount{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 80rpx;
+  height: 65rpx;
+  text-align: center;
+  border: 1px solid rgb(161, 161, 161);
+  font-size: 26rpx;
+}
+.cartBody .msg .btnL{
+  border-radius:6rpx 0 0 6rpx;
+  border-radius:50% none none 0;
+  border:rgb(161, 161, 161) 1px solid;
+  border-right: none;
+  color: rgb(161, 161, 161);
+}
+.cartBody .msg .btnR{
+  border-radius:0 6rpx 6rpx 0;
+  border:rgb(161, 161, 161) 1px solid;
+  border-left: none;
+  color: rgb(161, 161, 161);
+}
+.cartBody .msg .disabled{
+  border: 1px #cdcdcd solid;
+  background-color: #f1f1f1;
+  border-right: none;
+  color: #cdcdcd;
+}
+.cartBody .checkbox{
+  position: relative;
+  bottom: 80rpx;
+}
+.cartBody .title{
+  font-size: 30rpx;
+  display: block;
+}
+.cartBody .spec{
+  font-size: 25rpx;
+  display: block;
+  margin-top: 10rpx;
+  color: #8d8d8d;
+}
+.cartBody .goodsBox .bottom{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.cartBody .goodsBox .price{
+  font-size: 30rpx;
+  color: #6CBE72;
+}
+.cartBody .goodsBox .count{
+  font-size: 30rpx;
+  color:rgb(95, 95, 95);
+  display: inline-block;
+  float: right;
+}
+.cartBody .delBtn{/*删除按钮*/
+  background-color: rgb(238, 64, 64);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 18%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.settlement{
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 95rpx;
+}
+.settlement .checkbox{
+  position: absolute;
+  display: inline-block;
+  bottom: 28rpx;
+  left: 20rpx;
+}
+.settlement .checkbox .font{
+  font-size: 32rpx;
+}
+.settlement .pBox{
+  display: inline-block;
+  width: 68%;
+  text-align: right;
+  height: 95rpx;
+}
+.settlement .btn{
+  background-color: #6CBE72;
+  width: 30%;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  float: right;
+}
+.settlement .total{
+  font-weight: bold;
+  font-size: 28rpx;
+}
+.settlement .price{
+  color: #6CBE72;
+  font-size: 27rpx;
+  font-weight: bold;
+}
+.settlement .freight{
+  color: #8d8d8d;
+  font-size: 23rpx;
+  display: block;
+  position: relative;
+  bottom: 5rpx;
+}
+.cartPage .shopCart{
+  padding-top: 30%;
+}
+.cartPage .shopCart>image{
+  display:block;
+  margin:0 auto;
+  width:258rpx;
+  height:258rpx;
+}
+.cartPage .shopCart>text{
+  margin:0 auto;
+display:block;
+width:258rpx;
+height:29rpx;
+line-height:29rpx;
+text-align:center;
+font-size:29rpx;
+color:#999;
+
+}

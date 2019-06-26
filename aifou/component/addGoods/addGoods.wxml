@@ -1,0 +1,42 @@
+<!--component/addGoods/addGoods.wxml-->
+<view class='addGoodsBox'>
+  <view class='closeView' catchtap='close'></view>
+  <view class="inBox">
+    <view class='content'>
+      <view class='top'>
+        <image src='{{$imgIp+good.img}}' class='goodsImg'></image>
+        <view>
+          <text class='title'>{{good.title}}</text>
+          <text class='price' wx:if="{{!good.price}}">￥{{good.minPrice}}.00{{good.maxPrice?"-"+good.maxPrice+".00":""}}</text>
+          <text class='price' wx:else>￥{{good.price}}.00</text>
+        </view>
+        <image class='closeBtn' src='../../src/img/index/close.png' bindtap='close'></image>
+      </view>
+      <view class='center'>
+        <text>规格：</text>
+        <view wx:for="{{good.spec}}" wx:key="{{index}}" data-index="{{index}}" class='spec {{index==specIndex?"active":""}}' data-spec="{{item}}" bindtap='chooseSpec'>{{item==1?"深空灰 64G":(item==2?"深空灰 256G":(item==3?"银河白 64G":(item==4?"银河白 256G":"其他")))}}</view>
+      </view>
+      <view class='bottom'>
+        <text>购买数量：</text>
+        <view class='ediNum'>
+          <view class="btn btnL {{chooseGood.count<=1?'disabled':''}}" bindtap="changeCount" data-type="sub">
+            <text>-</text>
+          </view>
+          <view class='ediCount'>
+            <text>{{chooseGood.count}}</text>
+          </view>
+          <view class='btn btnR' bindtap="changeCount" data-type="add">
+            <text>+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='btnBox'  wx:if="{{nextBtn}}">
+      <view class='shopBtn' style="width:100%;" bindtap='jump'>下一步</view>
+    </view>
+    <view class='btnBox' wx:else>
+      <view class='cartBtn' bindtap='jump' data-where='cart'>加入购物车</view>
+      <view class='shopBtn' bindtap='jump'>立即购买</view>
+    </view>
+  </view>
+</view>

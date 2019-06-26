@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "爱否闪购",
+  "usingComponents": {
+    "cartButton": "../../component/cartButton/cartButton"
+  }
+}

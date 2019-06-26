@@ -1,0 +1,98 @@
+<!--pages/waitPay/waitPay.wxml-->
+<view class='waitPayPage'>
+  <view class='addressBox' bindtap='chooseAddress'>
+    <view style='width:11%;'>
+      <image src='../../src/img/index/gps.png'></image>
+    </view>
+    <view class='msg' wx:if="{{user.address}}">
+      <view class='clear'>
+        <text class='name'>收货人：{{user.name}}</text>
+        <text class='phone'>{{user.phone}}</text>
+      </view>
+      <view class='address'>收货地址：{{user.address}}</view>
+    </view>
+    <view class='msg' wx:else>
+      <text style='color:#ff4c00;font-size:35rpx;'>请选择收货地址</text>
+    </view>
+  </view>
+  <view class='line'>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+    <view class='red'></view>
+    <view class='blue'></view>
+  </view>
+  <view style='padding:20rpx 20rpx 0 20rpx;background-color: #fff;'>
+    <view class='store'>
+      <image src='../../src/img/cart/store.png'></image>
+      <text>爱否闪购</text>
+    </view>
+    <view class='good' wx:for="{{goodsList}}" wx:key="{{index}}">
+      <view style='width:30%;text-align:center;'>
+        <image src='{{$imgIp+item.img}}'></image>
+      </view>
+      <view class='msgBox'>
+        <view class='top'>
+          <text>{{item.title}}</text>
+          <text class='price'>{{item.price}}</text>
+        </view>
+        <view class='bottom'>
+          <text>{{item.spec==1?"深空灰 64G":(item.spec==2?"深空灰 256G":(item.spec==3?"银河白 64G":(item.spec==4?"银河白 256G":"其他")))}}</text>
+          <text class='count'>x {{item.count}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='courier'>
+      <view class='left'>配送方式</view>
+      <view class='right'>
+        <text style='text-align:right;'>免运费</text>
+        <text>普通快递</text>
+      </view>
+    </view>
+    <view class='note'>
+      <text style='text-align:left;'>留言</text>
+      <input placeholder='给商家留言' placeholder-style="font-size:30rpx;"></input>
+    </view>
+    <view class='total'>
+      <text>合计</text>
+      <text class='price'>￥{{totalPrice}}.00</text>
+    </view>
+  </view>
+  <view class='discount'>
+    <text class='title'>优惠</text>
+    <text style='color:#797979;margin-right:25rpx;'>暂无可用</text>
+    <view class='arrow'></view>
+  </view>
+  <view class='priceType'>
+    <view>
+      <text>商品金额</text>
+      <text style='color:#797979;'>￥{{totalPrice}}.00</text>
+    </view>
+    <view>
+      <text>运费</text>
+      <text style='color:#797979;'>+￥0.00</text>
+    </view>
+  </view>
+  <view class='payBar'>
+    <view class='L'>
+      <text>合计：</text>
+      <text class='price'>￥{{totalPrice}}.00</text>
+    </view>
+    <view class='R' catchtap='toPay'>提交订单</view>
+  </view>
+</view>

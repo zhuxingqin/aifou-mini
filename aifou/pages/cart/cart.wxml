@@ -1,0 +1,67 @@
+<!--pages/cart/cart.wxml-->
+<view class='cartPage'>
+  <view class='cartTop' wx:if="{{goodsList}}">
+    <checkbox-group bindchange="allCheck">
+      <label class="checkbox flex flex-vc">
+        <checkbox value="true" checked="{{selectAll}}" color='#fff'></checkbox>
+        <image src='../../src/img/cart/store.png'></image>
+        <text class='storeName'>爱否闪购</text>
+      </label>
+      <text class='edi' catchtap='clickDle' wx:if="{{!delBtn}}">编辑</text>
+      <text class='edi' catchtap='clickDone' wx:if="{{delBtn}}">完成</text>
+    </checkbox-group>
+  </view>
+  <view class='cartBody' wx:if="{{goodsList}}">
+    <checkbox-group bindchange="oneCheckChange">
+      <view wx:for="{{goodsList}}" wx:key="{{index}}" class='goodsBox' bindtap='jump' data-where='details' data-pid='{{item.pid}}'>
+        <label class="checkbox flex flex-vc">
+          <checkbox color='#fff' value="{{index}}" checked="{{item.selected}}" data-index="{{index}}" catchtap='oneCheck'></checkbox>
+        </label>
+        <image src='{{$imgIp+item.img}}' class='pic'></image>
+        <view class="msg">
+          <text class='title' wx:if="{{!delBtn}}">{{item.title}}</text>
+          <view wx:else class='ediNum'>
+            <view class="{{item.count<=1?'disabled btn btnL':'btn btnL'}}" catchtap="sub" data-index="{{index}}">
+              <text>-</text>
+            </view>
+            <view class='ediCount'>
+              <text>{{item.count}}</text>
+            </view>
+            <view class='btn btnR' catchtap="add" data-index="{{index}}">
+              <text>+</text>
+            </view>
+          </view>
+          <text class='spec'>{{item.spec==1?"深空灰 64G":(item.spec==2?"深空灰 256G":(item.spec==3?"银河白 64G":(item.spec==4?"银河白 256G":"其他")))}}</text>
+          <view class='bottom'>
+            <text class='price'>￥{{item.price}}.00</text>
+            <text class='count'>X{{item.count}}</text>
+          </view>
+        </view>
+        <view wx:if="{{delBtn}}" class='delBtn' catchtap='doDel' data-index="{{index}}">
+          <text>删除</text>
+        </view>
+      </view>
+    </checkbox-group>
+  </view>
+  <view wx:if="{{goodsList.length<1}}" class='shopCart' bindtap='jump' data-where="classify">
+    <image src='../../src/img/cart/shopCart.png'></image>
+    <text>快去塞满购物车吧~</text>
+  </view>
+  <view class='settlement'>
+    <checkbox-group bindchange="allCheck">
+      <label class="checkbox flex flex-vc">
+        <checkbox color='#fff' name="true" checked='{{selectAll}}'></checkbox>
+        <text class='font'>全选</text>
+      </label>
+    </checkbox-group>
+    <view class='pBox'>
+      <view>
+        <text class='total' wx:if="{{!delBtn}}">合计：</text>
+        <text class='price' wx:if="{{!delBtn}}">￥{{total}}.00</text>
+      </view>
+      <text class='freight' wx:if="{{!delBtn}}">不含运费</text>
+    </view>
+    <button class='btn' wx:if="{{!delBtn}}" bindtap='jump' data-where='waitPay'>结算</button>
+    <button class='btn' wx:if="{{delBtn}}" catchtap='doDelAll'>删除</button>
+  </view>
+</view>

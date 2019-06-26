@@ -1,0 +1,87 @@
+/* pages/user/user.wxss */
+.userBox{
+  background-color: #F9F9F9;
+}
+.uInfo{
+  text-align: center;
+  background-color: #fff;
+  padding-top: 50rpx;
+  margin-bottom: 10rpx;
+}
+.uInfo .port{
+  display: block;
+  width: 170rpx;
+  height: 170rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  /* border: #fff 1rpx solid; */
+  box-shadow: 0 0 10px rgb(175, 175, 175);
+  text-align: center;
+  line-height: 170rpx;
+  font-size: 30rpx;
+  color: #717171;
+}
+.uInfo .uname{
+  display: block;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  padding-bottom: 30rpx;
+}
+.myOrder{
+  background-color: #fff;
+}
+.myOrder .orderTop{
+  border-bottom: 1px solid #ececec;
+  padding: 0 20rpx;
+  height: 80rpx;
+}
+.orderTop>.left{
+  display: inline-block;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.orderTop>.right{
+  display: inline-block;
+  float: right;
+  font-size: 26rpx;
+  color: #cdcdcd;
+  margin-top: 23rpx;
+  padding-right: 10rpx;
+}
+.arrow{ /*箭头图标*/
+  border-right:solid 2px #cdcdcd;
+  border-top:solid 2px #cdcdcd;
+  height: 20rpx;
+  width: 20rpx;
+  float: right;
+  transform: rotateZ(45deg);
+  margin: 28rpx 10rpx 0 0;
+}
+.orderBottom{
+  display: flex;
+  flex-direction: row;
+}
+.orderBottom>.orderClass{
+  flex: 1;
+  text-align: center;
+  padding: 30rpx;
+}
+.orderBottom>.orderClass>text{
+  font-size: 23rpx;
+}
+.orderBottom .icon{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin: 0 auto;
+}
+.jumpCart{
+  padding: 0 20rpx;
+  height: 80rpx;
+  background-color: #fff;
+}
+.listText{
+  display: inline-block;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}

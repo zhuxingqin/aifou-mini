@@ -1,0 +1,23 @@
+user:{
+  uId,
+  uName,
+  uImg,
+  uAdress
+}
+
+cart:{
+  uId,
+  pId,
+  pTitle,
+  pPrice,
+  pCount,
+  pSpec,
+}
+
+goodDetail:{
+  pId,
+  pTitle,
+  pPrice,
+  pCount,
+  pSpec,
+}

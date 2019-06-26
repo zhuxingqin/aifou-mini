@@ -1,0 +1,110 @@
+/* pages/search/search.wxss */
+.searchPage .search{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  flex-direction: row;
+  background-color: rgb(250, 250, 250);
+}
+.searchPage .sIcon{
+  margin-left: 40rpx;
+  align-self: center;
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+}
+.searchPage .inp{
+  display: inline-block;
+  height: 100rpx;
+  padding-left:20rpx; 
+  flex: 1;
+  font-size: 30rpx;
+  background-color: rgba(0,0,0,0);
+}
+.searchPage .hisBox{
+  padding: 25rpx 20rpx;
+}
+.searchPage .hisBox>.title{
+  font-size: 30rpx;
+  color: #919191;
+}
+.searchPage .hisBox>.clearHis{
+  border: 1px solid #cdcdcd;
+  border-radius: 50rpx;
+  color: #646464;
+  font-size: 28rpx;
+  line-height: 55rpx;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+}
+.searchPage .hisBox .content{
+  /* display: flex; */
+  flex-flow: row;
+  padding:20rpx 0; 
+}
+.searchPage .hisBox .text{
+  display: inline-block;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  background-color: #f1f1f1; 
+  padding: 10rpx; 
+}
+.searchPage .goodsBox{
+  padding: 20rpx;
+}
+.searchPage .goodsBox>.goodBox{
+  position: relative;
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid #f1f1f1;
+  height: 131rpx;
+}
+.searchPage .goodsBox>.goodBox>image{
+  display: inline-block;
+  width: 130rpx;
+  height: 130rpx;
+}
+.searchPage .goodsBox>.goodBox>view{
+  display: inline-block;
+  height: 130rpx;
+}
+.searchPage .goodsBox>.goodBox .title{
+  display:block;
+  font-size: 33rpx;
+}
+.searchPage .goodsBox>.goodBox .price{
+  color: #6CBE72;
+  font-size: 33rpx;
+}
+.searchPage .goodsBox>.goodBox .addCart{
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 90%;
+  background-color: #70B96B;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 37rpx;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.searchPage .goodsBox .noMore{
+  text-align: center;
+  font-size: 30rpx;
+  color: #919191;
+  line-height: 100rpx;
+}
+.close{
+  position: absolute;
+  top: 30rpx;
+  right: 20rpx;
+  width: 40rpx;
+  height:40rpx;
+  z-index: 2;
+}

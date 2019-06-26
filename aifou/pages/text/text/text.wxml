@@ -1,0 +1,80 @@
+
+<view>
+  <view class='swiper-tab'>
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">待付款</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">待发货</view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">待收货</view>
+    <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">已完成</view>
+  </view>
+ 
+  <swiper class='swiper' current='{{currentTab}}'  duration="300" bindchange="bindchange">
+    <view >
+      <swiper-item>
+          <scroll-view scroll-y="true">
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>第一页</view>
+            <view class='gaodu'>显示</view>
+          </scroll-view>
+        </swiper-item>
+      </view>
+    <swiper-item>
+      <scroll-view scroll-y="true">
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+        <view class='gaodu'>第二页</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true">
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+        <view class='gaodu'>第三页</view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true">
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>第四页</view>
+        <view class='gaodu'>1第四页</view>
+        <view class='gaodu'>0</view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

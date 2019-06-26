@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "i-checkbox-group": "../../dist/checkbox-group/index",
+    "i-checkbox": "../../dist/checkbox/index",
+    "i-radio": "../../dist/radio/index"
+  }
+}

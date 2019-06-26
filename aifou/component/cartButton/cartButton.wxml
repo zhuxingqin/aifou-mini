@@ -1,0 +1,5 @@
+<!--pages/cartButton/cartButton.wxml-->
+<view class='cartBox' bindtap='jump'>
+  <!-- <view class='point' wx:if="{{cartGoods.length>0}}"></view> -->
+  <image src='../../src/img/index/cartButton.png' style=''></image>
+</view>

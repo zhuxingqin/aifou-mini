@@ -1,0 +1,227 @@
+/* pages/goodDetails/goodDetails.wxss */
+
+page {
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+.detailBox {
+  position: relative;
+  height: 100%;
+}
+
+.detailBox .slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.detailBox .content {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.detailBox .content>.msg {
+  border-bottom: #f1f1f1 1px solid;
+}
+
+.detailBox .content>.msg>text {
+  display: block;
+  height: 35rpx;
+  line-height: 35rpx;
+  margin-bottom: 20rpx;
+}
+
+.detailBox .content>.msg>.title {
+  font-size: 30rpx;
+}
+
+.detailBox .content>.msg>.price {
+  color: #70b96b;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.detailBox .content>.msg>.oldPrice {
+  text-decoration: line-through;
+  font-size: 25rpx;
+  color: #707070;
+}
+
+.detailBox .content>text {
+  line-height: 35rpx;
+  font-size: 25rpx;
+  color: #8f8f8f;
+}
+
+.detailBox .content>.share {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.detailBox .content>.share>image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.detailBox .content>.share>text {
+  text-align: center;
+  font-size: 20rpx;
+  color: #8f8f8f;
+  display: block;
+}
+
+.detailBox .choseSpec {
+  background-color: #fff;
+  line-height: 75rpx;
+  font-size: 29rpx;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.detailBox .arrow {
+  /*箭头图标*/
+  border-right: solid 2px #cdcdcd;
+  border-top: solid 2px #cdcdcd;
+  height: 15rpx;
+  width: 15rpx;
+  float: right;
+  transform: rotateZ(45deg);
+  margin: 28rpx 10rpx 0 0;
+}
+
+.detailBox .store {
+  position: relative;
+  padding: 20rpx 20rpx 0 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.detailBox .store>.top {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #f1f1f1;
+  padding-bottom: 20rpx;
+}
+
+.detailBox .store .sname {
+  display: inline-block;
+}
+
+.detailBox .store .sname>.left {
+  font-size: 29rpx;
+  padding: 0 10rpx;
+}
+
+.detailBox .store .sname>.right {
+  background-color: #fd4145;
+  border-radius: 3px;
+  font-size: 25rpx;
+  color: #f1f1f1;
+  text-align: center;
+  display: inline-block;
+  width: 70rpx;
+  line-height: 35rpx;
+}
+
+.detailBox .store .arrow {
+  position: absolute;
+  right: 20rpx;
+  top: 42rpx;
+}
+
+.detailBox .store .logo {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.detailBox .store .bottom {
+  font-size: 25rpx;
+  display: flex;
+  align-items: center;
+}
+
+.detailBox .store .bottom>image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.detailBox .store .bottom>text {
+  display: inline-block;
+  line-height: 80rpx;
+}
+
+.detailBox .detail {
+  width: 100%;
+}
+
+.detailBox .detail>.title {
+  text-align: center;
+  color: #70b96b;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  border-bottom: solid 1px #f1f1f1;
+  background-color: #fff;
+}
+
+.detailBox .detail .imgBox {
+  width: 100%;
+  padding: 2%;
+}
+
+.detailBox .detail .imgBox>image {
+  width: 96%;
+}
+
+.detailBox .addBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  /* border-top: 1px solid #f1f1f1; */
+  box-shadow: 0 0 10rpx #cdcdcd;
+  background-color: #fff;
+  display: flex;
+}
+
+.detailBox .addBar .icon {
+  width: 53rpx;
+  height: 53rpx;
+}
+
+.detailBox .addBar .textS {
+  font-size: 23rpx;
+  display: block;
+  margin-top: -10rpx;
+  color: #515151;
+}
+
+.detailBox .addBar .sBtn {
+  width: 11%;
+  text-align: center;
+  padding: 15rpx;
+}
+
+.detailBox .addBar .bBtn {
+  width: 39%;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+}
+
+.detailBox .addBar .cartBtn {
+  background-color: #e1f3e3;
+  color: #6cbe74;
+}
+
+.detailBox .addBar .shopBtn {
+  background-color: #6cbe74;
+  color: #fff;
+}

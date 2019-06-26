@@ -1,0 +1,87 @@
+/* pages/classify/classify.wxss */
+page{
+  position: relative;
+  height: 100%;
+}
+.classifyBox{
+  width: 100%;
+  height: 100%;
+}
+.classifyBox .nav{
+  background-color:rgb(245, 245, 245);
+  width: 20%;
+  height: 100%;
+  position: fixed;
+}
+.nav .cTitle{
+  line-height: 100rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  color: #757575;
+}
+.classifyBox .bodyR{
+  float: right;
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+}
+.bodyR .cTitle{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  background-color: rgb(245, 245, 245);
+  padding-left: 20rpx;
+  font-size: 27rpx;
+  color: #757575;
+  line-height: 60rpx;
+}
+.bodyR .prompt{
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 120rpx;
+  color: #9e9e9e;
+}
+.bodyR .goodBox{
+  position: relative;
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid #f1f1f1;
+  height: 131rpx;
+}
+.bodyR .goodBox>image{
+  display: inline-block;
+  width: 130rpx;
+  height: 130rpx;
+}
+.bodyR .goodBox>view{
+  display: inline-block;
+  height: 130rpx;
+}
+.bodyR .goodBox .title{
+  display:block;
+  font-size: 33rpx;
+}
+.bodyR .goodBox .price{
+  color: #6CBE72;
+  font-size: 33rpx;
+}
+.bodyR .goodBox .addCart{
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 90%;
+  background-color: #70B96B;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 37rpx;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.active{
+  border-left:7rpx solid #70B96B;
+  background-color: #fff;
+}
